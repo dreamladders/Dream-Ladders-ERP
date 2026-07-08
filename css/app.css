@@ -214,3 +214,169 @@ body{
     font-size:24px;
 
 }
+
+/* ==========================================================
+   Main Content
+========================================================== */
+
+#content{
+
+    flex:1;
+
+    padding:30px;
+
+    overflow:auto;
+
+}
+
+
+/* ==========================================================
+   Welcome Card
+========================================================== */
+
+.welcome-card{
+
+    background:var(--white);
+
+    border-radius:16px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:25px;
+
+}
+
+.welcome-card h2{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+}
+
+.welcome-card p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   Footer
+========================================================== */
+
+footer{
+
+    background:var(--white);
+
+    border-top:1px solid var(--border);
+
+    padding:16px 30px;
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+   Scrollbar
+========================================================== */
+
+#content::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#content::-webkit-scrollbar-thumb{
+
+    background:#cbd5e1;
+
+    border-radius:10px;
+
+}
+
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width:992px){
+
+    .app-container{
+
+        grid-template-columns:80px 1fr;
+
+    }
+
+    .logo p{
+
+        display:none;
+
+    }
+
+    .sidebar nav ul li{
+
+        text-align:center;
+
+        font-size:18px;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .app-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        position:fixed;
+
+        left:-260px;
+
+        top:0;
+
+        width:260px;
+
+        height:100vh;
+
+        z-index:1000;
+
+        transition:left .30s ease;
+
+    }
+
+    .sidebar.open{
+
+        left:0;
+
+    }
+
+    .topbar{
+
+        padding:0 20px;
+
+    }
+
+    #content{
+
+        padding:20px;
+
+    }
+
+}
