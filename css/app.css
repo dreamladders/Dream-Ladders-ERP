@@ -95,3 +95,122 @@ body{
     padding:24px;
 
 }
+
+/* ==========================================================
+   Logo
+========================================================== */
+
+.logo{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid rgba(255,255,255,.10);
+
+}
+
+.logo h2{
+
+    font-size:24px;
+
+    color:#ffffff;
+
+    margin-bottom:6px;
+
+}
+
+.logo p{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+   Navigation
+========================================================== */
+
+.sidebar nav ul{
+
+    list-style:none;
+
+}
+
+.sidebar nav ul li{
+
+    padding:14px 16px;
+
+    margin-bottom:10px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-size:15px;
+
+}
+
+.sidebar nav ul li:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.sidebar nav ul li.active{
+
+    background:var(--primary);
+
+}
+
+
+/* ==========================================================
+   Main Layout
+========================================================== */
+
+.main-layout{
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+   Top Bar
+========================================================== */
+
+.topbar{
+
+    height:var(--header-height);
+
+    background:var(--white);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+}
+
+.topbar h1{
+
+    font-size:24px;
+
+}
