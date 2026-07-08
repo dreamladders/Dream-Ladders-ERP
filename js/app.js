@@ -65,3 +65,90 @@ function checkSession() {
     }
 
 }
+
+/* ==========================================================
+   Register Navigation
+========================================================== */
+
+function registerNavigation() {
+
+    menuItems.forEach(function (item) {
+
+        item.addEventListener("click", function () {
+
+            const menuName = item.textContent.trim();
+
+            setActiveMenu(item);
+
+            handleNavigation(menuName);
+
+        });
+
+    });
+
+}
+
+
+/* ==========================================================
+   Active Menu
+========================================================== */
+
+function setActiveMenu(selectedItem) {
+
+    menuItems.forEach(function (item) {
+
+        item.classList.remove("active");
+
+    });
+
+    selectedItem.classList.add("active");
+
+}
+
+
+/* ==========================================================
+   Handle Navigation
+========================================================== */
+
+function handleNavigation(menuName) {
+
+    switch (menuName) {
+
+        case "🏠 Dashboard":
+            loadDashboard();
+            break;
+
+        case "👥 Employees":
+            loadEmployees();
+            break;
+
+        case "🕒 Attendance":
+            loadAttendance();
+            break;
+
+        case "📦 Inventory":
+            loadInventory();
+            break;
+
+        case "🚚 Suppliers":
+            loadSuppliers();
+            break;
+
+        case "🛒 Purchases":
+            loadPurchases();
+            break;
+
+        case "📊 Reports":
+            loadReports();
+            break;
+
+        case "⚙ Settings":
+            loadSettings();
+            break;
+
+        case "🚪 Logout":
+            logout();
+            break;
+    }
+
+}
