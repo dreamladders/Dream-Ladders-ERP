@@ -125,13 +125,26 @@ function handleLogin(event) {
       Google Apps Script API to verify users.
     */
 
-    if (username === "admin" && password === "admin123") {
+    
+      if (username === "admin" && password === "admin123") {
 
-        alert("Login Successful!");
+    setLoginButtonLoading(true);
+
+    createSession(username);
+
+    setTimeout(function () {
 
         window.location.href = "dashboard.html";
 
-    } else {
+    }, 800);
+
+} 
+
+
+
+       
+    
+    else {
 
         alert("Invalid username or password.");
 
@@ -188,3 +201,96 @@ function saveRememberedUsername(username) {
     }
 
 }
+
+/* ==========================================================
+   Session Management (Temporary)
+========================================================== */
+
+function createSession(username) {
+
+    const session = {
+
+        username: username,
+
+        loginTime: new Date().toISOString(),
+
+        authenticated: true
+
+    };
+
+    sessionStorage.setItem(
+        "dlbs_session",
+        JSON.stringify(session)
+    );
+
+}
+
+
+/* ==========================================================
+   Loading Button
+========================================================== */
+
+function setLoginButtonLoading(isLoading) {
+
+    const loginButton = document.getElementById("loginButton");
+
+    if (isLoading) {
+
+        loginButton.disabled = true;
+
+        loginButton.textContent = "Signing In...";
+
+    } else {
+
+        loginButton.disabled = false;
+
+        loginButton.textContent = "Login";
+
+    }
+
+}
+
+
+/* ==========================================================
+   Check Existing Session
+========================================================== */
+
+function checkExistingSession() {
+
+    const session = sessionStorage.getItem("dlbs_session");
+
+    if (!session) {
+
+        return;
+
+    }
+
+    /*
+      In future modules,
+      authenticated users
+      will automatically
+      go to dashboard.
+    */
+
+}
+
+
+/* ==========================================================
+   Update initializePage()
+   ==========================================================
+
+   IMPORTANT:
+
+   Modify initializePage() so it becomes:
+
+   function initializePage() {
+
+       checkExistingSession();
+
+       loadRememberedUsername();
+
+       registerEvents();
+
+   }
+
+========================================================== */
