@@ -1,0 +1,120 @@
+/* ==========================================================
+   Dream Ladders ERP
+   File        : login.css
+   Module      : Authentication
+   Page        : Login
+   Version     : 1.0.0
+   Author      : Dream Ladders
+   Description : Styles for the Login Page
+   ========================================================== */
+
+
+/* ==========================================================
+   1. Root Variables
+   ========================================================== */
+
+:root{
+
+    --primary-color:#2563eb;
+    --primary-hover:#1d4ed8;
+
+    --background-color:#f4f7fc;
+
+    --card-color:#ffffff;
+
+    --text-color:#1e293b;
+
+    --secondary-text:#64748b;
+
+    --border-color:#dbe3ec;
+
+    --success-color:#22c55e;
+
+    --danger-color:#ef4444;
+
+    --shadow:
+
+        0 15px 40px rgba(0,0,0,.08);
+
+    --radius:14px;
+
+    --transition:.30s ease;
+
+    --font-family:
+        "Poppins",
+        Arial,
+        sans-serif;
+
+}
+
+
+/* ==========================================================
+   2. Reset
+   ========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   3. Body
+   ========================================================== */
+
+body{
+
+    font-family:var(--font-family);
+
+    background:var(--background-color);
+
+    color:var(--text-color);
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+   4. Login Page Layout
+   ========================================================== */
+
+.login-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+
+/* ==========================================================
+   5. Login Card
+   ========================================================== */
+
+.login-card{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:var(--card-color);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:40px;
+
+}
