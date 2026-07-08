@@ -1,0 +1,97 @@
+/* ==========================================================
+   Dream Ladders ERP
+   File        : app.css
+   Module      : Application Shell
+   Version     : 1.0.0
+   ========================================================== */
+
+
+/* ==========================================================
+   Root Variables
+========================================================== */
+
+:root{
+
+    --sidebar-width:260px;
+
+    --header-height:70px;
+
+    --primary:#2563eb;
+
+    --primary-dark:#1d4ed8;
+
+    --background:#f4f7fb;
+
+    --sidebar:#0f172a;
+
+    --white:#ffffff;
+
+    --text:#1e293b;
+
+    --border:#e2e8f0;
+
+    --shadow:0 10px 25px rgba(0,0,0,.08);
+
+    --transition:.30s ease;
+
+}
+
+
+/* ==========================================================
+   Reset
+========================================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ==========================================================
+   Body
+========================================================== */
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+
+/* ==========================================================
+   Main Grid
+========================================================== */
+
+.app-container{
+
+    display:grid;
+
+    grid-template-columns:var(--sidebar-width) 1fr;
+
+    min-height:100vh;
+
+}
+
+
+/* ==========================================================
+   Sidebar
+========================================================== */
+
+.sidebar{
+
+    background:var(--sidebar);
+
+    color:var(--white);
+
+    padding:24px;
+
+}
